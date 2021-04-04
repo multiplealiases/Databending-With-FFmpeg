@@ -142,7 +142,7 @@ Specifies an input file called "cityscape.raw".
 ~~~
 -c:a libmp3lame
 ~~~
-Specifies the libmp3lame encoder, otherwise known as just LAME. If you've had to install LAME in older versions of Audacity to save audio as MP3, this is exactly what it is.
+Specifies the libmp3lame encoder, otherwise known as just LAME. If you've had to install this thing called "LAME" in older versions of Audacity in order to save audio as MP3, that is exactly what this is.
 ~~~
 -b:a 32k
 ~~~
