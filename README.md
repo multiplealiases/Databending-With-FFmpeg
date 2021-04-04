@@ -68,7 +68,7 @@ then you need to recheck your first command. Once you have a working `set` comma
 
 ## Getting Down to Business
 
-Once you've set your PATH (assuming you didn't skip the previous step; adjust accordingly if you did), convert your images into planar RAW with Irfanview, saving with a short filename without spaces. Oh, and take note of the resolution of your image. Then go into your `cmd` window where you've set the PATH, and navigate to the folder with the images you're going to be working with. I'll be using this picture to demonstrate:
+Once you've set your PATH (assuming you didn't skip the previous step; adjust accordingly if you did), convert your images into planar RAW with Irfanview, saving with a short filename without spaces. Oh, and take note of the resolution of your image. Then go into your `cmd` window where you've set the PATH, and navigate to the folder with the images you're going to be working with. I'll be using this picture to demonstrate, naming it "cityscape.raw":
 
 ![landscape photography of city skyline at night](https://i.postimg.cc/mRKB23JH/chuttersnap-JH0w-Ceg-Jsr-Q-unsplash.jpg)
 
@@ -356,3 +356,4 @@ It's not too drastic here, but you can see that's it's had an effect on the imag
 While I don't think it's quite as spectacular as applying Paulstretch on images, I think it's still an interesting effect to apply. There are a lot of audio codecs out there (though you'd want lossy ones, not lossless), so there's all sorts of fun you could have with that.
 
 If there's anything you'd like to add or change, fork (and add a pull request) this repository or contact me on GitHub at [multiplealiases](https://github.com/multiplealiases).
+
