@@ -112,9 +112,9 @@ video:0kB audio:601kB subtitle:0kB other streams:0kB global headers:0kB muxing o
 
 
 ### A breakdown of the command I just wrote
-
-`ffmpeg`
-
+~~~
+ffmpeg
+~~~
 Self-explanatory; runs ffmpeg.
 
 #### Input section
