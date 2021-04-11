@@ -67,6 +67,7 @@ operable program or batch file.
 then you need to recheck your first command. Once you have a working `set` command, copy the entire command into a text file somewhere to run again later if you do end up having to close that `cmd` window. 
 
 ## Getting Down to Business
+Or rather, some theory. Technically speaking, when you're working with uncompressed images, there's actually no difference between it and audio. It's all data anyway. Now, if I tried doing this the normal way, FFmpeg would not let you do any of this. The way to get around  this is to tell FFmpeg that your raw image data is audio, as I'll demonstrate a bit later. Then, you tell it to decode that "audio" back to its original format as if it was audio. We know full well that it's not audio, but keeping FFmpeg in the dark is how this trickery can be done in the first place.
 
 Once you've set your PATH (assuming you didn't skip the previous step; adjust accordingly if you did), convert your images into planar RAW with Irfanview, saving with a short filename without spaces. Oh, and take note of the resolution of your image. Then go into your `cmd` window where you've set the PATH, and navigate to the folder with the images you're going to be working with. I'll be using this picture to demonstrate, naming it "cityscape.raw":
 
@@ -121,7 +122,7 @@ Self-explanatory; runs ffmpeg.
 ~~~
 -f u8
 ~~~
-Specifies a format of unsigned 8-bit PCM. 
+Specifies a format of unsigned 8-bit PCM audio. 
 
 ~~~
 -ar 48000
@@ -159,7 +160,7 @@ cityscape-mp3-32k.mkv
 Generates an output file called "cityscape-mp3-32k.mkv", mkv indicating the use of a Matroska container format.
 
 #### Why MKV, not MP3?
-MKV is a universal container format. A container format lets you combine multiple streams (like audio and video) into one file, but they're not all are created equal. MP4, for instance, allows only a limited set of audio and video formats. MKV is different, and lets you put anything and everything into it. If you can think it, it's probably supported. It's easier to just put .mkv at the end, instead of having to remember which formats go with which exact container. This breaks compatibility with a lot of players, but VLC shouldn't have problems with it.
+MKV is a universal container format. A container format lets you combine multiple streams (like audio and video) into one file, but they're not all are created equal. MP4, for instance, allows only a limited set of audio and video formats. MKV is different, and lets you put anything and everything into it. If you can think it, it's probably supported. It's easier to just put .mkv at the end, instead of having to remember which formats go with which exact container. This breaks compatibility with a lot of players, but VLC and FFmpeg shouldn't have problems with it.
 
 ## Converting the audio back into raw data
 
@@ -356,4 +357,5 @@ It's not too drastic here, but you can see that's it's had an effect on the imag
 While I don't think it's quite as spectacular as applying Paulstretch on images, I think it's still an interesting effect to apply. There are a lot of audio codecs out there (though you'd want lossy ones, not lossless), so there's all sorts of fun you could have with that.
 
 If there's anything you'd like to add or change, fork (and add a pull request) this repository or contact me on GitHub at [multiplealiases](https://github.com/multiplealiases).
+
 
