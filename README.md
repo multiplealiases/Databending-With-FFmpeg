@@ -10,13 +10,15 @@
  - [VLC](https://www.videolan.org/) (optional, but used for demonstration purposes)
 
 ## Required Reading
-If you wish to follow along, please read and understand this article first if you haven't already:
+If you wish to follow along, please read and understand these articles first if you haven't already:
 
 [Databending with Audacity: What I do Differently/Required Reading](https://github.com/multiplealiases/Databending-In-Audacity-Required-Reading/blob/main/README.md) by me
 
-It covers my particular methodology for databending, and how it's different from the one shown in the first article. It's centered on Audacity as the databending method, but two of the fundamental ideas there (specifically about using RAW, and planar RAW at that) will be used throughout.
+[(A small part of) Databending with Audacity: FFmpeg as an Intermediary for Images](https://github.com/multiplealiases/Databending-Audacity-FFmpeg/blob/main/README.md) by me
 
-I'll also assume that you at least vaguely understand what FFmpeg is, and have a copy on your system somewhere. A small amount of command-line experience is needed; at least know how to change directories.
+The first one covers my particular methodology for databending, and how it's different from the one shown in the first article. It's centered on Audacity as the databending method, but two of the fundamental ideas there (specifically about using RAW, and planar RAW at that) will be used throughout.
+
+As for the second one, you don't need to read the whole thing. It's just the part that covers how to get FFmpeg that matters here. If you already know how to do that, you don't need to go through that article.
 
 ## An optional, but recommended tip: Add the FFmpeg directory to PATH temporarily.
 
@@ -69,7 +71,7 @@ operable program or batch file.
 then you need to recheck your first command. Once you have a working `set` command, copy the entire command into a text file somewhere to run again later if you do end up having to close that `cmd` window. 
 
 ## Getting Down to Business
-Or rather, some theory. Technically speaking, when you're working with uncompressed images, there's actually no difference between it and audio. It's all data anyway. Now, if I tried doing this the normal way, FFmpeg would not let you do any of this. The way to get around  this is to tell FFmpeg that your raw image data is audio, as I'll demonstrate a bit later. Then, you tell it to decode that "audio" back to its original format as if it was audio. We know full well that it's not audio, but keeping FFmpeg in the dark is how this trickery can be done in the first place.
+Or rather, some theory. Technically speaking, when you're working with uncompressed images, there's actually no difference between it and audio. It's all data anyway. Now, if I tried doing this the normal way, FFmpeg would not let you do any of this. The way to get around this is to tell FFmpeg that your raw image data is audio, as I'll demonstrate a bit later. Then, you tell it to decode that "audio" back to its original format as if it was audio. We know full well that it's not audio, but keeping FFmpeg in the dark is how this trickery can be done in the first place.
 
 Once you've set your PATH (assuming you didn't skip the previous step; adjust accordingly if you did), convert your images into planar RAW with Irfanview, saving with a short filename without spaces. Oh, and take note of the resolution of your image. Then go into your `cmd` window where you've set the PATH, and navigate to the folder with the images you're going to be working with. I'll be using this picture to demonstrate, naming it "cityscape.raw":
 
@@ -358,7 +360,7 @@ It's not too drastic here, but you can see that's it's had an effect on the imag
 
 While I don't think it's quite as spectacular as applying Paulstretch on images, I think it's still an interesting effect to apply. There are a lot of audio codecs out there (though you'd want lossy ones, not lossless), so there's all sorts of fun you could have with that.
 
-If there's anything you'd like to add or change, fork (and add a pull request) this repository or contact me on GitHub at [multiplealiases](https://github.com/multiplealiases).
+If there's anything you'd like to add or change, fork (and add a pull request) this repository or find my contact info on GitHub at [multiplealiases](https://github.com/multiplealiases).
 
 ***
 
