@@ -73,6 +73,8 @@ then you need to recheck your first command. Once you have a working `set` comma
 ## Getting Down to Business
 Or rather, some theory. Technically speaking, when you're working with uncompressed images, there's actually no difference between it and audio. It's all data anyway. Now, if I tried doing this the normal way, FFmpeg would not let you do any of this. The way to get around this is to tell FFmpeg that your raw image data is audio, as I'll demonstrate a bit later. Then, you tell it to decode that "audio" back to its original format as if it was audio. We know full well that it's not audio, but keeping FFmpeg in the dark is how this trickery can be done in the first place.
 
+[\(The following has been superseded by this addendum: *Automated image to audio 'bending*\)](https://github.com/multiplealiases/Addendum-Automated-I2A2I/blob/main/README.md)
+
 Once you've set your PATH (assuming you didn't skip the previous step; adjust accordingly if you did), convert your images into planar RAW with Irfanview, saving with a short filename without spaces. Oh, and take note of the resolution of your image. Then go into your `cmd` window where you've set the PATH, and navigate to the folder with the images you're going to be working with. I'll be using this picture to demonstrate, naming it "cityscape.raw":
 
 ![landscape photography of city skyline at night](https://i.postimg.cc/mRKB23JH/chuttersnap-JH0w-Ceg-Jsr-Q-unsplash.jpg)
@@ -364,8 +366,9 @@ If there's anything you'd like to add or change, fork (and add a pull request) t
 
 ***
 
-This work (excluding the images that are explicitly credited to [Unsplash](https://unsplash.com))  is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by]
+except where stated otherwise.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
